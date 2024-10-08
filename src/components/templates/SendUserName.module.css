@@ -1,0 +1,68 @@
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 0 20px;
+}
+.itemInput {
+  position: relative;
+  width: 100%;
+}
+.itemInput label {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: var(--main-blue);
+  padding: 0 10px;
+  pointer-events: none;
+  transition: 0.5s ease;
+}
+.itemInput input {
+  width: 100%;
+
+  height: 55px;
+  font-size: 1.5rem;
+  color: var(--main-blue);
+  padding: 0 10px;
+  background: transparent;
+  border: 2px solid var(--main-blue);
+  outline: none;
+  border-radius: 10px;
+}
+
+form button {
+  width: 100%;
+  height: 55px;
+  background-color: var(--main-blue);
+  color: var(--main-white);
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 1.7rem;
+}
+.other {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+}
+.forgot {
+  font-size: 0.9rem;
+  color: var(--main-blue);
+  border-bottom: 1px solid var(--main-blue);
+}
+.register {
+  font-size: 0.9rem;
+  color: var(--main-gray);
+}
+.itemInput input:focus + label,
+.itemInput input:valid + label {
+  top: 0;
+  font-size: 1rem;
+  background: #e1e6ea;
+}

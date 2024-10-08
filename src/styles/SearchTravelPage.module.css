@@ -1,0 +1,25 @@
+.container {
+  margin: 0 30px;
+  display: flex;
+  justify-content: center;
+}
+.searchTravel {
+
+  width: 100%;
+  max-width: var(--main-max-width);
+}
+.infoTimeTravel{
+    background-color: var(--gray-1);
+    border-radius: 10px;
+    width: 100%;
+    margin: 30px auto;
+}
+.main{
+  display: flex;
+  gap: 30px;
+}
+.mainIn{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}

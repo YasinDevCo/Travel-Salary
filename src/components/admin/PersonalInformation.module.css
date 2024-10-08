@@ -1,0 +1,70 @@
+.PIContent {
+  width: 100%;
+  padding: 20px;
+  background: radial-gradient(
+    105.19% 158.74% at -3.3% 37.9%,
+    #ffffff 0%,
+    #e4ebed 32.48%,
+    #dbdde6 100%
+  );
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.PIContent h4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--main-text);
+}
+.PIContent .form {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.PIContent .item {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+  gap: 10px;
+}
+.item label {
+  color: var(--main-gray);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.item input {
+  width: 100%;
+  background-color: var(--main-white);
+  height: 60px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  padding: 10px;
+  font-size: 1.2rem;
+  color: var(--main-text);
+}
+.btnSave {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.PIContent .form button {
+  width: 100px;
+}
+.item .error {
+  color: var(--main-blue);
+  font-size: 1rem;
+}
+
+/* media query */
+
+@media (max-width: 1052px) {
+  .PIContent .item {
+    width: 100%;
+  }
+}
+
+@media (max-width: 750px) {
+}

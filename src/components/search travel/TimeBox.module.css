@@ -1,0 +1,33 @@
+.timeBox{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+margin-bottom: 20px;
+}
+.timeBox .btnR,
+.timeBox .btnL{
+    height: 100%;
+    width: 50px;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--main-blue);
+    color: var(--main-white);
+}
+.timeBox .btnR{
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.timeBox .btnL{
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.timeBox .span{
+    width: calc(100% / 6 );
+    height: 100%;
+    border-left: 1.5px solid var(--gray-1);
+}

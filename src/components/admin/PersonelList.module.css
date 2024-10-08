@@ -1,0 +1,95 @@
+
+.list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.list .listTitle {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--gray-2);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.list .listTitle h4 {
+  border-right: 2px solid var(--main-text);
+  padding-right: 10px;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--main-text);
+}
+.list .listTitle div {
+  display: flex;
+  gap: 20px;
+  font-size: 1.1rem;
+}
+.list .listTitle div span {
+  color: var(--main-blue);
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+.contentList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: hidden;
+  overflow-y: scroll;
+  height: 500px;
+  background-color: var(--gray-2);
+  padding: 10px;
+  border-radius: 10px;
+}
+.contentListItem {
+  width: 100%;
+  background: var(--radial-gradient);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10px;
+  border-radius: 10px;
+}
+.contentListItem span {
+  color: var(--gray);
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 5px;
+}
+.contentListItem div {
+  display: flex;
+  gap: 20px;
+}
+.contentListItem div button {
+  color: var(--main-blue);
+  font-size: 1.1rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 5px;
+}
+.list .listTitle div span:last-child {
+  display: none;
+}
+@media (max-width: 1052px) {
+  .list .listTitle div span {
+    display: none;
+  }
+  .list .listTitle div span:last-child {
+    display: flex;
+  }
+}
+
+@media (max-width: 750px) {
+
+}

@@ -1,0 +1,100 @@
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 0 20px;
+}
+.itemInput {
+  position: relative;
+  width: 100%;
+}
+.itemInput label {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: var(--main-blue);
+  padding: 0 10px;
+  pointer-events: none;
+  transition: 0.5s ease;
+}
+.itemInput input {
+  width: 100%;
+  height: 55px;
+  font-size: 1.5rem;
+  color: var(--main-blue);
+  padding: 0 10px;
+  background: transparent;
+  border: 2px solid var(--main-blue);
+  outline: none;
+  border-radius: 10px;
+}
+
+form .btnSub {
+  width: 100%;
+  height: 55px;
+  background-color: var(--main-blue);
+  color: var(--main-white);
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 1.7rem;
+}
+
+.register {
+  font-size: 0.9rem;
+  color: var(--main-gray);
+}
+.radio {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.radio label {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.radio div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.radio input[type="radio"] {
+  margin-left: 8px;
+  accent-color: var(--main-blue);
+  transform: scale(1.2);
+}
+
+.radio label input[type="radio"]:checked + span {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.radio label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.radio label span {
+  margin-left: 5px;
+}
+
+.radio label:hover input[type="radio"] {
+  cursor: pointer;
+}
+
+.itemInput input:focus + label,
+.itemInput input:valid + label {
+  top: 0;
+  font-size: 1rem;
+  background: #e1e6ea;
+}

@@ -1,0 +1,26 @@
+.container {
+  margin: 0 30px;
+  display: flex;
+  justify-content: center;
+}
+.adminPanel {
+  margin: 20px auto;
+  /* padding: 0 30px; */
+  max-width: var(--main-max-width);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+.panelContent {
+  width: 100%;
+  max-width: 1050px;
+  z-index: 100;
+}
+@media (max-width: 1052px) {
+
+}
+@media (max-width: 750px) {
+
+}

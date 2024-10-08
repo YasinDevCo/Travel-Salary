@@ -1,0 +1,186 @@
+.container {
+  margin: 0 30px;
+  display: flex;
+  justify-content: center;
+}
+.header {
+  display: flex;
+  width: 100%;
+  max-width: var(--main-max-width);
+  justify-content: space-between;
+  z-index: 1000;
+  align-items: center;
+}
+.menu ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.menu ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+.menu ul a {
+  font-size: 1.2rem;
+  color: var(--main-text);
+}
+
+.menu .content {
+  display: none;
+  position: absolute;
+  min-width: 100px;
+  background-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 4px;
+  margin-top: 185px;
+}
+.menu .content .item {
+  display: block;
+  color: var(--main-text);
+  padding: 10px 15px;
+}
+.menu .dropdown:hover .content {
+  display: block;
+}
+.menu .dropdown:hover .content {
+  background-color: rgb(255, 255, 255);
+}
+.menu .dropdown .item:hover {
+  background-color: var(--gray-1);
+}
+.btnAcount {
+  background-color: transparent;
+  padding: 15px 15px;
+  font-size: 1.2rem;
+  border-radius: 20px;
+  color: var(--main-text);
+  border: 2px solid var(--main-text);
+}
+.btnAcountIcone{
+  width: 50px;
+  height: 50px;
+  display: none;
+  background-color: transparent;
+  color: var(--main-text);
+  border: none;
+}
+.btnAcountIcone img{
+  width: 100%;
+  height: 100%;
+}
+.menuTablet {
+  display: none;
+}
+.menuTablet ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.menuTablet ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+.menuTablet ul a {
+  font-size: 1.2rem;
+  color: var(--main-text);
+}
+
+.menuTablet .content {
+  display: none;
+  position: absolute;
+  min-width: 100px;
+  background-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 4px;
+  margin-top: 185px;
+}
+.menuTablet .content .item {
+  display: block;
+  color: var(--main-text);
+  padding: 10px 15px;
+}
+.menuTablet .dropdown:hover .content {
+  display: block;
+}
+.menuTablet .dropdown:hover .content {
+  background-color: rgb(255, 255, 255);
+}
+.menuTablet .dropdown .item:hover {
+  background-color: var(--gray-1);
+}
+
+.mobileContainer {
+  display: none;
+}
+.menuMobile {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  background: var(--bg-liner);
+  border-top-left-radius: 20px;
+  border-top-right-radius:20px ;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+.menuMobile ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.menuMobile ul li a{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  color: var(--main-text);
+}
+
+.menuMobile ul li a {
+  color: var(--main-text);
+  font-size: 1.3rem;
+  margin-top: 5px;
+}
+.topMobile {
+  display: flex;
+  justify-content: center;
+ 
+  background:var(--bg-liner);
+  height: 220px;
+}
+.topMobile img {
+  margin-top: 50px;
+  height: 50px;
+}
+/* media query */
+
+@media (max-width: 1052px) {
+  .menu {
+    display: none;
+  }
+  .menuTablet {
+    display: flex;
+  }
+ .btnAcount{
+  display: none;
+ }
+ .btnAcountIcone{
+  display: flex;
+ }
+}
+
+@media (max-width: 750px) {
+  .menuTablet,
+  .header {
+    display: none;
+  }
+  .mobileContainer {
+    display: block;
+  }
+}

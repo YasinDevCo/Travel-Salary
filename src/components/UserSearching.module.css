@@ -1,0 +1,75 @@
+.containerAll {
+  padding: 0 30px;
+  
+  margin: 0 auto;
+  max-width: var(--main-max-width);
+}
+.searchBoxContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.title h3 {
+  font-size: 2rem;
+}
+.title {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.userSrearchs {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.userSrearch {
+  width: calc(100% / 4);
+  flex-wrap: wrap;
+  height: 193px;
+  background-color: var(--gray-2);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: right;
+  flex-direction: column;
+  gap: 15px;
+}
+.userSrearch:first-child {
+  background-color: var(--gray-1);
+}
+.titleOD {
+  display: flex;
+  justify-content: center;
+  align-items: right;
+  gap: 10px;
+}
+.titleOD {
+  font-size: 1.8rem;
+}
+.userSrearch p {
+  display: flex;
+  justify-content: center;
+  align-items: right;
+  gap: 10px;
+  font-size: 1.3rem;
+}
+
+.clear {
+  color: var(--main-blue);
+  font-size: 1.2rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media (max-width: 1050px) {
+ 
+}
+
+@media (max-width: 750px) {
+  .searchBoxContent {
+   display: none;
+  }
+}

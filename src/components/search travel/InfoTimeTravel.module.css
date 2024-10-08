@@ -1,0 +1,98 @@
+.infoTimeTravel {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  border-radius: 15px;
+  margin: 0 auto;
+}
+
+.inputs {
+  display: flex;
+  gap: 10px;
+  width: 80%;
+  height: 65px;
+  justify-content: space-between;
+}
+
+.input {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  position: relative;
+}
+.input .change {
+  background-color: var(--main-gray-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.btnRight,
+.btnLeft {
+  flex: 1;
+  padding: 5px 20px;
+  height: 100%;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  color: var(--main-gray);
+  font-size: 1.2rem;
+
+}
+
+.other {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  height: 65px;
+
+  width: 20%;
+}
+
+.passengerInput {
+  flex: 1;
+  padding: 10px 20px;
+  border-radius: 10px;
+  height: 100%;
+  font-size: 1.2rem;
+  width: 50%;
+  outline: none;
+  border: none;
+}
+
+.btnSearch {
+  width: 50%;
+  height: 100%;
+  padding: 10px 20px;
+  background-color: var(--main-blue);
+  color: var(--main-white);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+.change{
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+@media (max-width: 768px) {
+}
+
+@media (max-width: 480px) {
+}

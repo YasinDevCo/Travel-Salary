@@ -1,0 +1,63 @@
+.passwoardContent {
+  width: 100%;
+  padding: 20px;
+  background: radial-gradient(
+    105.19% 158.74% at -3.3% 37.9%,
+    #ffffff 0%,
+    #e4ebed 32.48%,
+    #dbdde6 100%
+  );
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.passwoardContent h4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--main-text);
+}
+.passwoardContent div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.passwoardContent div input {
+  width: 50%;
+  background-color: var(--main-white);
+  height: 60px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  padding: 10px;
+  font-size: 1.2rem;
+  color: var(--main-text);
+}
+.passwoardContent div button {
+  width: 50%;
+  height: 60px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--main-white);
+  background-color: var(--main-blue);
+}
+/* media query */
+
+@media (max-width: 1052px) {
+  .passwoardContent div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .passwoardContent div input,
+  .passwoardContent div button {
+    width: 100%;
+  }
+ 
+}
+
+@media (max-width: 750px) {
+}

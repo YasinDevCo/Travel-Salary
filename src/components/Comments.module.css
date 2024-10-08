@@ -1,0 +1,57 @@
+.sliderComments {
+  max-width: var(--main-max-width);
+  width: 100%;
+  padding: 0 30px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  overflow: hidden;
+  margin-bottom: 100px;
+}
+.sliderComments .comment {
+  overflow: hidden;
+  width: 300px;
+  height: 250px;
+  padding: 10px;
+  background: var(--radial-gradient);
+  border-radius: 20px;
+  border-bottom-right-radius: 0;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  position: relative;
+}
+.sliderComments .comment p {
+  z-index: 1;
+  width: 80%;
+}
+.sliderComments .comment div {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: var(--main-white);
+  padding-top: 5px;
+  padding-left: 10px;
+  border-radius: 15px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.sliderComments .comment div {
+}
+.sliderComments .comment div img {
+  width: 45px;
+  border-radius: 8px;
+  height: 45px;
+  object-fit: cover;
+}
+.coma {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 50px;
+}

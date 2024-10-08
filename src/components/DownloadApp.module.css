@@ -1,0 +1,253 @@
+.container {
+  padding: 0 30px;
+  margin: 0 auto;
+  max-width: var(--main-max-width);
+}
+.downloadPart {
+  width: 100%;
+}
+.back {
+  width: 100%;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.back .pic {
+  position: absolute;
+  width: 150px;
+  height: 420px;
+  border-radius: 20px;
+  left: 0;
+  object-fit: cover;
+  z-index: 10;
+  box-shadow: rgba(0, 0, 0, 0.1) 10px 0px 20px;
+}
+.back .pic2 {
+  position: absolute;
+  width: 150px;
+  height: 300px;
+  border-radius: 20px;
+  left: 100px;
+  object-fit: cover;
+  z-index: 9;
+  box-shadow: rgba(0, 0, 0, 0.1) 10px 0px 20px;
+}
+.contentDownload {
+  border-radius: 20px;
+  width: 100%;
+  height: 390px;
+  background: radial-gradient(
+    105.19% 158.74% at -3.3% 37.9%,
+    #ffffff 0%,
+    #e4ebed 32.48%,
+    #dbdde6 100%
+  );
+  display: flex;
+  justify-content: flex-start;
+  gap: 80px;
+  align-items: center;
+}
+.backBarcode {
+  width: 180px;
+  height: 180px;
+}
+.barcode {
+  margin-right: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+.barcode img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.info h3 {
+  font-size: 2.5rem;
+}
+.info .p1 {
+  font-size: 1.7rem;
+}
+
+.info .p2 {
+  font-size: 1.5rem;
+  display: flex;
+  gap: 10px;
+  color: var(--main-gray);
+}
+.info .link {
+  display: flex;
+  width: 240px;
+  border: 1px solid var(--main-blue);
+  padding: 5px 6px;
+  justify-content: space-between;
+  border-radius: 35px;
+  align-items: center;
+}
+.link p {
+  font-size: 1.2rem;
+  color: var(--main-blue);
+  font-weight: 600;
+}
+.link div {
+  background-color: var(--main-blue);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* media query */
+@media (max-width: 1052px) {
+  .downloadPart {
+    width: 100%;
+    height: 600px;
+  }
+  .back {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+  }
+
+  .contentDownload {
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 80px;
+    align-items: center;
+  }
+  .other {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+  }
+  .info .link {
+    display: flex;
+    width: 230px;
+    height: 36px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .link p {
+    font-size: 1.1rem;
+  }
+  .linkIcone {
+    margin-left: -2px;
+  }
+  .link div {
+    width: 30px;
+    height: 30px;
+  }
+
+  .info {
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    top: 40px;
+  }
+  .info h3 {
+    font-size: 2.5rem;
+  }
+  .info .p1 {
+    font-size: 1.7rem;
+  }
+
+  .info .p2 {
+    font-size: 1.5rem;
+    display: flex;
+    gap: 10px;
+    color: var(--main-gray);
+  }
+  .barcode {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+  }
+  .backBarcode {
+    width: 120px;
+    height: 120px;
+  }
+  .barcode {
+    margin-right: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  /* .back .pic {
+    position: absolute;
+    width: 150px;
+    height: 420px;
+    border-radius: 20px;
+    left: 0;
+    object-fit: cover;
+    z-index: 10;
+    box-shadow: rgba(0, 0, 0, 0.1) 10px 0px 20px;
+  }
+  .back .pic2 {
+    position: absolute;
+    width: 150px;
+    height: 300px;
+    border-radius: 20px;
+    left: 100px;
+    object-fit: cover;
+    z-index: 9;
+    box-shadow: rgba(0, 0, 0, 0.1) 10px 0px 20px;
+  } */
+}
+@media (max-width: 750px) {
+  .downloadPart {
+    height: 450px;
+  }
+  .info .p2 {
+    display: none;
+  }
+
+  .barcode {
+    display: none;
+  }
+  .back .pic {
+    position: absolute;
+    width: 150px;
+    height: 230px;
+    border-radius: 20px;
+    left: 50%;
+    transform: translate(-90%);
+    object-fit: cover;
+    z-index: 10;
+    box-shadow: rgba(0, 0, 0, 0.1) 10px 0px 20px;
+  }
+  .back .pic2 {
+    position: absolute;
+    width: 150px;
+    height: 180px;
+    border-radius: 20px;
+    left: 50%;
+    transform: translate(-10%);
+    object-fit: cover;
+    z-index: 9;
+    box-shadow: rgba(0, 0, 0, 0.1) 10px 0px 20px;
+  }
+  .container {
+    margin: 30px;
+  }
+}
