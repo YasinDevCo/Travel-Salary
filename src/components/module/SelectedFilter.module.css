@@ -1,6 +1,7 @@
 .selectMenue {
   width: 150px;
   position: relative; 
+  margin-top: -50px;
 }
 .selectBtn {
   display: flex;

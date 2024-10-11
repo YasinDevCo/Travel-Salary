@@ -55,3 +55,9 @@
   top: 20px;
   width: 50px;
 }
+@media (max-width: 750px) {
+  .sliderComments {
+    max-width: var(--main-max-width);
+    width: 100%;
+    padding: 0 10px;}
+}

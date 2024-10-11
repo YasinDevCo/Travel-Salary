@@ -19,18 +19,18 @@ function HomePage() {
       <br />
       <TravelBox />
       <br />
-      {/* <UserSearching /> */}
+      <UserSearching />
       <br />
-      {/* <Offers /> */}
+      <Offers />
       <br />
 
       {/* <DownloadApp /> */}
       <br />
       {/* <Services /> */}
       <br />
-      {/* <QuestionAnsewer /> */}
+      <QuestionAnsewer />
       <br />
-      {/* <Comments/> */}
+      <Comments/>
     </div>
   );
 }

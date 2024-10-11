@@ -39,6 +39,14 @@
   margin-bottom: 10px;
 }
 
+
+@media (max-width: 750px) {
+  .container{
+    max-width: var(--main-max-width);
+  
+      padding: 0 10px !important;}
+}
+
 /* 
 .container {
     max-width: 800px;

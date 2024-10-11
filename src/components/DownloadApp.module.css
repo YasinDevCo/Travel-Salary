@@ -215,6 +215,9 @@
   } */
 }
 @media (max-width: 750px) {
+  .container {
+    padding: 0 10px;
+    }
   .downloadPart {
     height: 450px;
   }
