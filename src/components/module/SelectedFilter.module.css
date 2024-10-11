@@ -1,0 +1,42 @@
+.selectMenue {
+  width: 150px;
+  position: relative; 
+}
+.selectBtn {
+  display: flex;
+  height: 60px;
+  background-color: var(--main-white);
+  padding: 20px;
+  font-size: 1.1rem;
+  font-weight: 300;
+  border-radius: 15px;
+  align-items: center;
+  cursor: pointer;
+  color: var(--gray-color);
+  justify-content: space-between;
+  box-shadow: 0 0 20px rgba(226, 226, 226, 0.055);
+}
+
+.options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  margin-top: 2px;
+  border-radius: 8px;
+  z-index: 1000;
+}
+.option {
+  margin-top: 1px;
+  display: flex;
+  height: 50px;
+  cursor: pointer;
+  padding: 0 16px;
+  border-radius: 8px;
+  align-items: center;
+  background-color: var(--gray-2);
+  color: var(--main-text);
+}
+
+
+

@@ -11,8 +11,8 @@
   margin: 50px 0;
 }
 .tapMenu {
-  width: 635px;
-  height: 105px;
+  width: 695px;
+  height: 115px;
   background: radial-gradient(
       105.19% 158.74% at -3.3% 37.9%,
       #ffffff 0%,
@@ -20,7 +20,8 @@
       #dbdde6 100%
     )
     /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
-  border-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   padding-top: 5px;
 }
 .tapMenu ul {
@@ -30,22 +31,25 @@
   align-items: center;
 }
 .tapMenu ul li {
-  width: 100px;
-  height: 100px;
+  width: 110px;
+  height: 110px;
   background-color: var(--main-bg);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   color: var(--main-text);
+  padding: 10px 2px;
 }
 .tapMenu ul li:first-child {
   background-color: var(--main-blue);
-  color: #ffffff;
+  color: var(--main-white);
 }
 .tapMenu ul li span {
-  font-size: 1.8rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
 }
 .formBox {
   width: 100%;
@@ -58,24 +62,11 @@
     #dbdde6 100%
   );
   border-radius: 10px;
+  border-top-right-radius: 0;
   position: relative;
   display: flex;
   justify-content: center;
   flex-direction: column;
-}
-.formBox .btn {
-  width: 136px;
-  height: 60px;
-  border-radius: 15px;
-  border: none;
-  font-size: 1.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  color: var(--main-text);
-  background-color: var(--main-bg);
-  margin-bottom: 20px;
 }
 
 .travelBoxMobile {
@@ -98,6 +89,10 @@
   width: 90%;
   margin: 0 auto;
 }
+.tapMenuMobile ul li:first-child {
+  background-color: var(--main-blue);
+  color: var(--main-white);
+}
 .tapMenuMobile ul {
   width: 100%;
   display: flex;
@@ -119,11 +114,6 @@
 }
 
 @media (max-width: 1052px) {
-  .other {
-    display: flex;
-    width: 100%;
-    gap: 5px;
-  }
 }
 
 @media (max-width: 750px) {
@@ -133,15 +123,12 @@
   .travelBoxMobile {
     display: flex;
   }
-
-  .formBox .btn {
-    width: 100px;
-    height: 45px;
-    border-radius: 10px;
-    font-size: 1.2rem;
+  .formBox {
+    padding: 10px ;
+    background: none;
   }
-  
 }
+
 @media (max-width: 450px) {
   .tapMenuMobile ul li {
     width: 90px;
@@ -153,12 +140,13 @@
     width: 80px;
     height: 80px;
   }
-}@media (max-width: 300px) {
+}
+@media (max-width: 300px) {
   .tapMenuMobile ul li {
     width: 70px;
     height: 70px;
   }
-  .iconeMenu{
+  .iconeMenu {
     size: 30px;
   }
 }

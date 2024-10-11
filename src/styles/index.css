@@ -14,7 +14,7 @@
   --bg-liner: radial-gradient(
     105.19% 158.74% at -3.3% 37.9%,
     #272a3b 0%,
-     #256a9c 100%
+    #256a9c 100%
   );
 
   --radial-gradient: radial-gradient(
@@ -23,6 +23,8 @@
     #e4ebed 32.48%,
     #dbdde6 100%
   );
+
+  --menu-mobile: #367eb21a;
 }
 
 [data-theme="dark"] {
@@ -43,6 +45,9 @@
     #330d8c 0%,
     #8a5ef0 100%
   );
+
+  --menu-mobile: #367eb21a;
+
 }
 
 [data-theme="blue"] {
@@ -63,6 +68,9 @@
     #751000 0%,
     #ff4f34 100%
   );
+
+  --menu-mobile: #367eb21a;
+
 }
 
 * {

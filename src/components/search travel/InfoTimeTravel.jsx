@@ -54,7 +54,7 @@ function InfoTimeTravel() {
           </select>
           
           <span className={style.change}>
-            <PiRepeat size={30} color="#272A3B" />
+            <PiRepeat size={24} color="#272A3B" />
           </span>
           
           <select
@@ -79,7 +79,7 @@ function InfoTimeTravel() {
           />
 
           <span className={style.change}>
-            <PiRepeat size={30} color="#272A3B" />
+            <PiRepeat size={24} color="#272A3B" />
           </span>
           
           <input

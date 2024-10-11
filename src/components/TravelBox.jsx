@@ -4,6 +4,14 @@ import { GiAirplaneDeparture } from "react-icons/gi";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { PiRepeat } from "react-icons/pi";
 import InfoTimeTravel from "./search travel/InfoTimeTravel";
+import SelectedFilter from "./module/SelectedFilter";
+import planet from "./../assets/icones/planet.svg";
+import train from "./../assets/icones/train.svg";
+import basteh from "./../assets/icones/bastehSafar.svg";
+import viza from "./../assets/icones/viza.svg";
+import bimeh from "./../assets/icones/bimeh.svg";
+import cpi from "./../assets/icones/cpi.svg";
+
 function TravelBox() {
   return (
     <div className={style.coll}>
@@ -13,36 +21,33 @@ function TravelBox() {
             <div className={style.tapMenu}>
               <ul>
                 <li>
-                  <GiAirplaneDeparture size={40} />
+                  <img className={style.iconeMenu}  src={planet} alt="" />
                   <span>هواپیما</span>
                 </li>
                 <li>
-                  <GiAirplaneDeparture size={40} />
-                  <span>هواپیما</span>
+                  <img className={style.iconeMenu} src={train} alt="" />
+                  <span>قطار</span>
                 </li>
                 <li>
-                  <GiAirplaneDeparture size={40} />
-                  <span>هواپیما</span>
+                  <img className={style.iconeMenu} src={basteh} alt="" />
+                  <span>بسته سفر</span>
                 </li>
                 <li>
-                  <GiAirplaneDeparture size={40} />
-                  <span>هواپیما</span>
+                  <img className={style.iconeMenu} src={viza} alt="" />
+                  <span>ویزا</span>
                 </li>
                 <li>
-                  <GiAirplaneDeparture size={40} />
-                  <span>هواپیما</span>
+                  <img className={style.iconeMenu} src={bimeh} alt="" />
+                  <span>بیمه مسافرتی</span>
                 </li>
                 <li>
-                  <GiAirplaneDeparture size={40} />
-                  <span>هواپیما</span>
+                  <img className={style.iconeMenu} src={cpi} alt="" />
+                  <span> CPI فرودگاه </span>
                 </li>
               </ul>
             </div>
             <div className={style.formBox}>
-              <button className={style.btn}>
-                یک طرفه
-                <IoMdArrowDropdown />
-              </button>
+              <SelectedFilter />
               <InfoTimeTravel />
             </div>
           </div>
@@ -52,37 +57,34 @@ function TravelBox() {
           <div className={style.tapMenuMobile}>
             <ul>
               <li>
-                <GiAirplaneDeparture classNamwe={style.iconeMenu} size={40} />
+                <img className={style.iconeMenu}  src={planet} alt="" />
                 <span>هواپیما</span>
               </li>
               <li>
-                <GiAirplaneDeparture classNamwe={style.iconeMenu} size={40} />
-                <span>هواپیما</span>
+                <img className={style.iconeMenu} src={train} alt="" />
+                <span>قطار</span>
               </li>
               <li>
-                <GiAirplaneDeparture classNamwe={style.iconeMenu} size={40} />
-                <span>هواپیما</span>
+                <img className={style.iconeMenu} src={basteh} alt="" />
+                <span>بسته سفر</span>
               </li>
               <li>
-                <GiAirplaneDeparture classNamwe={style.iconeMenu} size={40} />
-                <span>هواپیما</span>
+                <img className={style.iconeMenu} src={viza} alt="" />
+                <span>ویزا</span>
               </li>
               <li>
-                <GiAirplaneDeparture classNamwe={style.iconeMenu} size={40} />
-                <span>هواپیما</span>
+                <img className={style.iconeMenu} src={bimeh} alt="" />
+                <span>بیمه مسافرتی</span>
               </li>
               <li>
-                <GiAirplaneDeparture classNamwe={style.iconeMenu} size={40} />
-                <span>هواپیما</span>
+                <img className={style.iconeMenu} src={cpi} alt="" />
+                <span> CPI فرودگاه </span>
               </li>
             </ul>
           </div>
           <div className={style.formBox}>
-            <button className={style.btn}>
-              یک طرفه
-              <IoMdArrowDropdown />
-            </button>
-            {/* <InfoTimeTravel /> */}
+            <SelectedFilter />
+            <InfoTimeTravel />
           </div>
         </div>
       </div>
