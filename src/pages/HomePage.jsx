@@ -11,26 +11,26 @@ import UserSearching from "../components/UserSearching";
 function HomePage() {
   return (
     <div>
-      <div style={{ display: "flex", gap: "10px" }}>
+      {/* <div style={{ display: "flex", gap: "10px" }}>
         <ThemeOption theme="dark" />
         <ThemeOption theme="light" />
         <ThemeOption theme="blue" />
-      </div>
+      </div> */}
       <br />
       <TravelBox />
       <br />
-      <UserSearching />
+      {/* <UserSearching /> */}
       <br />
-      <Offers />
+      {/* <Offers /> */}
       <br />
 
-      <DownloadApp />
+      {/* <DownloadApp /> */}
       <br />
       {/* <Services /> */}
       <br />
-      <QuestionAnsewer />
+      {/* <QuestionAnsewer /> */}
       <br />
-      <Comments/>
+      {/* <Comments/> */}
     </div>
   );
 }

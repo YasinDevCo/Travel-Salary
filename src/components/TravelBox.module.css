@@ -81,7 +81,7 @@
 .travelBoxMobile {
   width: 100%;
   display: none;
-  margin-top: -30px;
+  margin-top: -45px;
   flex-direction: column;
   background: radial-gradient(
     105.19% 158.74% at -3.3% 37.9%,
@@ -94,7 +94,7 @@
 }
 .tapMenuMobile {
   position: relative;
-  top: -60px;
+  top: -70px;
   width: 90%;
   margin: 0 auto;
 }
@@ -106,8 +106,10 @@
   justify-content: center;
 }
 .tapMenuMobile ul li {
-  width: calc(100% / 3 - 30px);
-  padding: 20px;
+  /* width: calc(100% / 3 - 30px); */
+  width: 100px;
+  height: 100px;
+  /* padding: 20px; */
   border-radius: 10px;
   background-color: var(--main-bg);
   display: flex;
@@ -132,12 +134,31 @@
     display: flex;
   }
 
-
   .formBox .btn {
     width: 100px;
     height: 45px;
     border-radius: 10px;
     font-size: 1.2rem;
   }
- 
+  
+}
+@media (max-width: 450px) {
+  .tapMenuMobile ul li {
+    width: 90px;
+    height: 90px;
+  }
+}
+@media (max-width: 350px) {
+  .tapMenuMobile ul li {
+    width: 80px;
+    height: 80px;
+  }
+}@media (max-width: 300px) {
+  .tapMenuMobile ul li {
+    width: 70px;
+    height: 70px;
+  }
+  .iconeMenu{
+    size: 30px;
+  }
 }

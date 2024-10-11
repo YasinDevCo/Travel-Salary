@@ -14,7 +14,7 @@
   --bg-liner: radial-gradient(
     105.19% 158.74% at -3.3% 37.9%,
     #272a3b 0%,
-    1 #256a9c 100%
+     #256a9c 100%
   );
 
   --radial-gradient: radial-gradient(
@@ -75,6 +75,7 @@ body {
   background-color: var(--main-bg);
   color: var(--main-text);
   transition: background-color 0.5s ease, color 0.5s ease;
+  font-family: Vazirmatn;
 }
 li {
   list-style: none;
@@ -97,7 +98,7 @@ select {
   margin: 20px 0;
 } */
 
-@media (max-width: 1050px) {
+/* @media (max-width: 1050px) {
   .containerAll {
     margin: 0 50px !important;
   }
@@ -105,3 +106,12 @@ select {
 
 @media (max-width: 800px) {
 }
+@media (max-width: 450px) {
+  .containerAll {
+    margin: 0 30px !important;
+  }
+}
+@media (max-width: 350px) {
+}
+@media (max-width: 300px) {
+} */

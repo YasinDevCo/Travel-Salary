@@ -52,27 +52,27 @@ function TravelBox() {
           <div className={style.tapMenuMobile}>
             <ul>
               <li>
-                <GiAirplaneDeparture size={40} />
+                <GiAirplaneDeparture classNamwe={style.iconeMenu} size={40} />
                 <span>هواپیما</span>
               </li>
               <li>
-                <GiAirplaneDeparture size={40} />
+                <GiAirplaneDeparture classNamwe={style.iconeMenu} size={40} />
                 <span>هواپیما</span>
               </li>
               <li>
-                <GiAirplaneDeparture size={40} />
+                <GiAirplaneDeparture classNamwe={style.iconeMenu} size={40} />
                 <span>هواپیما</span>
               </li>
               <li>
-                <GiAirplaneDeparture size={40} />
+                <GiAirplaneDeparture classNamwe={style.iconeMenu} size={40} />
                 <span>هواپیما</span>
               </li>
               <li>
-                <GiAirplaneDeparture size={40} />
+                <GiAirplaneDeparture classNamwe={style.iconeMenu} size={40} />
                 <span>هواپیما</span>
               </li>
               <li>
-                <GiAirplaneDeparture size={40} />
+                <GiAirplaneDeparture classNamwe={style.iconeMenu} size={40} />
                 <span>هواپیما</span>
               </li>
             </ul>
@@ -82,7 +82,7 @@ function TravelBox() {
               یک طرفه
               <IoMdArrowDropdown />
             </button>
-            <InfoTimeTravel />
+            {/* <InfoTimeTravel /> */}
           </div>
         </div>
       </div>

@@ -276,3 +276,7 @@
     font-size: .8rem;
   }
 }
+@media (max-width: 450px) {
+  .container {
+    padding: 0 10px;}
+}

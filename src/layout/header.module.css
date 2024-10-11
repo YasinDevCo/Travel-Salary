@@ -140,13 +140,14 @@
   flex-direction: column-reverse;
   align-items: center;
   color: var(--main-text);
-}
-
-.menuMobile ul li a {
-  color: var(--main-text);
   font-size: 1.3rem;
   margin-top: 5px;
+}.menuMobile ul li a img{
+  width: 40px;
+  
 }
+
+
 .topMobile {
   display: flex;
   justify-content: center;
@@ -157,6 +158,10 @@
 .topMobile img {
   margin-top: 50px;
   height: 50px;
+}
+
+.activeLink {
+  color: var(--main-blue);
 }
 /* media query */
 
