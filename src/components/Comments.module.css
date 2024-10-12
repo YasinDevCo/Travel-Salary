@@ -41,8 +41,7 @@
   align-items: center;
   gap: 5px;
 }
-.sliderComments .comment div {
-}
+
 .sliderComments .comment div img {
   width: 45px;
   border-radius: 8px;

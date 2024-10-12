@@ -1,7 +1,7 @@
 .selectMenue {
   width: 150px;
-  position: relative; 
-  margin-top: -50px;
+  position: relative;
+  margin-top: -10px;
 }
 .selectBtn {
   display: flex;
@@ -39,5 +39,8 @@
   color: var(--main-text);
 }
 
-
-
+@media (max-width: 750px) {
+  .selectMenue {
+    margin-top: -50px;
+  }
+}

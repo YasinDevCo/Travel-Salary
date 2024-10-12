@@ -207,4 +207,28 @@
   }
 }
 @media (max-width: 480px) {
+  .inputs .input select {
+  
+    font-size: .9rem;
+   
+   
+  }
+  .inputs .input input {
+  
+    font-size: .9rem;
+  
+  }
+}
+@media (max-width: 380px) {
+  .inputs .input select {
+  
+    font-size: .8rem;
+   
+   
+  }
+  .inputs .input input {
+  
+    font-size: .8rem;
+  
+  }
 }

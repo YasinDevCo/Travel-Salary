@@ -38,15 +38,35 @@
   line-height: 1.6;
   margin-bottom: 10px;
 }
-
-
+.text{
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+.answer{
+  font-weight: 200;
+  font-size: 1rem;
+}
 @media (max-width: 750px) {
   .container{
     max-width: var(--main-max-width);
   
       padding: 0 10px !important;}
 }
-
+@media (max-width: 450px) {
+  .text{
+    font-weight: 300;
+    font-size: 1rem;
+  }
+  .answer{
+    font-weight: 200;
+    font-size: .9rem;
+  }
+  .hiddenBox.active {
+    height: auto;
+    transition: max-height 0.3s ease;
+    margin-bottom: 24px;
+  }
+}
 /* 
 .container {
     max-width: 800px;

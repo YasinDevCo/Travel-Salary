@@ -3,7 +3,7 @@ import style from "./QuestionAnsewer.module.css";
 import { BsQuestionCircle } from "react-icons/bs";
 import { faqs } from "../constants/FAQs";
 import { SlArrowDown, SlArrowUp } from "react-icons/sl";
-import qi from "./../assets/qustionIcone.svg"
+import qi from "./../assets/qustionIcone.svg";
 function QuestionAnswer() {
   const [activeIndex, setActiveIndex] = useState(null); // نگه‌داری id سوال فعال
 
@@ -13,37 +13,38 @@ function QuestionAnswer() {
   };
 
   return (
- <div className={style.container}>
-       <div className={style.accordion} >
-      {faqs.map((item, index) => (
-        <div key={item.id} className={style.item}  onClick={() => toggleAccordion(index)}>
-          <span className={style.iconeQuestion}>
-           <img src={qi} alt="" />
-          </span>
-          <p className={style.text}>{item.question}</p>
-
-          <span
-            className={style.iconArrow}
-           
-          >
-            {activeIndex === index ? (
-              <SlArrowUp size={30} />
-            ) : (
-              <SlArrowDown size={30} />
-            )}
-          </span>
-          {/* نمایش پاسخ بر اساس id سوال فعال */}
+    <div className={style.container}>
+      <div className={style.accordion}>
+        {faqs.map((item, index) => (
           <div
-            className={`${style.hiddenBox} ${
-              activeIndex === index ? style.active : ""
-            }`}
+            key={item.id}
+            className={style.item}
+            onClick={() => toggleAccordion(index)}
           >
-            <p>{item.answer}</p>
+            <span className={style.iconeQuestion}>
+              <img src={qi} alt="" />
+            </span>
+            <p className={style.text}>{item.question}</p>
+
+            <span className={style.iconArrow}>
+              {activeIndex === index ? (
+                <SlArrowUp size={30} />
+              ) : (
+                <SlArrowDown size={30} />
+              )}
+            </span>
+            {/* نمایش پاسخ بر اساس id سوال فعال */}
+            <div
+              className={`${style.hiddenBox} ${
+                activeIndex === index ? style.active : ""
+              }`}
+            >
+              <p className={style.answer}>{item.answer}</p>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
- </div>
   );
 }
 
