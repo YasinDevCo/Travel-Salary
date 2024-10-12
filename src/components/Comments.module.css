@@ -5,10 +5,11 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
   gap: 20px;
-  overflow: hidden;
   margin-bottom: 100px;
+
 }
 .sliderComments .comment {
   overflow: hidden;
@@ -58,5 +59,6 @@
   .sliderComments {
     max-width: var(--main-max-width);
     width: 100%;
-    padding: 0 10px;}
+    padding: 0 10px;
+  }
 }

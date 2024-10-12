@@ -19,7 +19,7 @@ function HomePage() {
       <br />
       <TravelBox />
       <br />
-      <UserSearching />
+      {/* <UserSearching /> */}
       <br />
       <Offers />
       <br />

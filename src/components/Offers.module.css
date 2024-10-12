@@ -163,5 +163,10 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 0;
+  
+  }
+  .items:last-child .box .boxLinerTitleLast p{
+
+
   }
 }
