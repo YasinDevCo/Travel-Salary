@@ -152,7 +152,7 @@
   .form {
     
     width: calc(100% - 20px);
-    height:1000px;
+    height:auto;
     
   
   }
