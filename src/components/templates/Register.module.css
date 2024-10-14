@@ -98,3 +98,11 @@ form .btnSub {
   font-size: 1rem;
   background: #e1e6ea;
 }
+
+@media (max-width: 750px) {
+
+  .itemInput {
+    display: flex;
+    flex-direction: column;
+  }
+}

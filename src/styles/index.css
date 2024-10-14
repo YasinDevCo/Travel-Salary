@@ -112,7 +112,7 @@ select {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 750px) {
 }
 @media (max-width: 450px) {
   .containerAll {

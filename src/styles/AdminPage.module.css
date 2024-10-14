@@ -22,5 +22,8 @@
 
 }
 @media (max-width: 750px) {
-
+  .container {
+    margin: 0 10px;
+  
+  }
 }

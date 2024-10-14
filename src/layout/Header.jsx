@@ -144,7 +144,6 @@ function Header({ setShowLoginPage }) {
           <ul>
             <li>
               <Link to={"/home"}>
-                خانه
                 <img
                   src={selectedLink === "home" ? homeBlue : home}
                   alt="Home"
@@ -153,7 +152,6 @@ function Header({ setShowLoginPage }) {
             </li>
             <li>
               <Link to={"/home/services"}>
-                خدمات
                 <img
                   src={selectedLink === "services" ? serviceBlue : service}
                   alt="Services"
@@ -162,7 +160,6 @@ function Header({ setShowLoginPage }) {
             </li>
             <li>
               <Link to={"/home/travels"}>
-                سفر ها
                 <img
                   src={selectedLink === "travels" ? travelBlue : travel}
                   alt="Travels"
@@ -172,7 +169,6 @@ function Header({ setShowLoginPage }) {
             <li>
               {login === 1 && (
                 <Link onClick={showHandler}>
-                ورود | ثبت نام
                   <img
                     src={selectedLink === "admin" ? accountBlue : account}
                     alt="Admin"
@@ -181,7 +177,6 @@ function Header({ setShowLoginPage }) {
               )}{" "}
               {login === 2 && (
                 <Link to={"/home/admin"}>
-                  حساب ادمین
                   <img
                     src={selectedLink === "admin" ? accountBlue : account}
                     alt="Admin"
@@ -190,7 +185,6 @@ function Header({ setShowLoginPage }) {
               )}
               {login === 3 && (
                 <Link to={"/home"}>
-                  حساب کاربری
                   <img
                     src={selectedLink === "admin" ? accountBlue : account}
                     alt="Admin"

@@ -84,3 +84,23 @@ cursor: pointer;
   height: 100%;
   background-color: white;
 }
+  
+
+@media (max-width: 750px) {
+  .contentIn {
+    width: calc(100% - 20px);
+    height: 450px;
+    margin: auto 10px;
+    position: relative;
+    top: 50%;
+    transform:translateY(-50%) ;
+  }
+  .content .form {
+   border-radius: 20px;
+    width: 100%;
+   
+  }
+  .content .image {
+   display: none;
+  }
+}

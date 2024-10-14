@@ -6,61 +6,70 @@
   height: 100%;
   backdrop-filter: blur(6px);
   z-index: 10000;
+  overflow: hidden;
 
+}
+.form {
+  overflow: hidden;
 
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    105.19% 158.74% at -3.3% 37.9%,
+    #ffffff 0%,
+    #e4ebed 32.48%,
+    #dbdde6 100%
+  );
+  width: 450px;
+  height: fit-content;
+  border-radius: 20px;
 }
-.form{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: radial-gradient(
-        105.19% 158.74% at -3.3% 37.9%,
-        #ffffff 0%,
-        #e4ebed 32.48%,
-        #dbdde6 100%
-      );
-    width: 450px;
-    height: fit-content;
-    border-radius: 20px;
+.top {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  padding: 20px;
 }
-.top{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row-reverse;
-    padding: 20px;
+.top h4 {
+  font-size: 1.2rem;
+  color: var(--main-text);
 }
-.top h4{
-    font-size: 1.2rem;
-    color: var(--main-text);
+.top span {
+  cursor: pointer;
 }
-.top span{
-    cursor: pointer;
+.form .content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
 }
-.form .content{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
+.content input {
+  width: 100%;
+  background-color: var(--main-white);
+  height: 60px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  padding: 10px;
+  font-size: 1.2rem;
+  color: var(--main-text);
 }
-.content input{
-    width: 100%;
-    background-color: var(--main-white);
-    height: 60px;
-    border-radius: 10px;
-    outline: none;
-    border: none;
-    padding: 10px;
-    font-size: 1.2rem;
-    color: var(--main-text);
-}.content button {
-    width:100%;
-    height: 60px;
-    border-radius: 10px;
-    outline: none;
-    border: none;
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: var(--main-white);
-    background-color: var(--main-blue);
+.content button {
+  width: 100%;
+  height: 60px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--main-white);
+  background-color: var(--main-blue);
+}
+
+@media (max-width: 750px) {
+  .changeContent .form {
+    width: calc(100% - 20px);
   }
+}

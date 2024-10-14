@@ -89,7 +89,7 @@ function Register({
           <div className={style.itemInput}>
             <input
               style={{ width: "100%" }}
-              type="text"
+              ty  pe="text"
               id="username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}

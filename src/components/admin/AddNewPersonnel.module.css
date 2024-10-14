@@ -84,9 +84,10 @@
   width: 100%;
 }
 .NewUserContent .form .btns {
-  position: absolute;
+  /* position: absolute;
   bottom: 50px;
-  left: 80px;
+  left: 80px; */
+  margin-top: 20px;
   display: flex;
   flex-direction: row-reverse;
   gap: 10px;
@@ -128,7 +129,7 @@
   
   .inputs .passInput {
     width: 100%;
-  }
+  } 
   .inputs input {
     width: 100%;
     padding: 10px;
@@ -148,9 +149,11 @@
     padding: 0;
     padding-top: 20px;
   }
-  .form{
-    width: 100%;
-    height:auto;
-    max-width: 420px;
+  .form {
+    
+    width: calc(100% - 20px);
+    height:1000px;
+    
+  
   }
 }

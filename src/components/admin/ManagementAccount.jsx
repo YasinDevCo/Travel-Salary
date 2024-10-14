@@ -11,9 +11,9 @@ function ManagementAccount({ form, setForm }) {
         <h3>حساب مدیریتی</h3>
         <button>خروج از حساب</button>
       </div>
+      {showPass && <PasswoardChange setShowPass={setShowPass} />}
       <Passwoard setShowPass={setShowPass} />
       <PersonalInformation form={form} setForm={setForm} />
-      {showPass && <PasswoardChange setShowPass={setShowPass} />}
     </div>
   );
 }
