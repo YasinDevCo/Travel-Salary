@@ -6,13 +6,27 @@ import basteh from "./../assets/icones/bastehSafar.svg";
 import viza from "./../assets/icones/viza.svg";
 import bimeh from "./../assets/icones/bimeh.svg";
 import cpi from "./../assets/icones/cpi.svg";
+import planetBlue from "./../assets/icones/planetBlue.svg";
+import trainBlue from "./../assets/icones/trainBlue.svg";
+import bastehBlue from "./../assets/icones/bastehSafarBlue.svg";
+import vizaBlue from "./../assets/icones/vizaBlue.svg";
+import bimehBlue from "./../assets/icones/bimehBlue.svg";
+import cpiBlue from "./../assets/icones/cpiBlue.svg";
 import SelectedFilter from "./module/SelectedFilter";
 import InfoTimeTravel from "./search travel/InfoTimeTravel";
+
+const travelOptions = [
+  { label: "هواپیما", icon: planet, activeIcon: planetBlue },
+  { label: "قطار", icon: train, activeIcon: trainBlue },
+  { label: "بسته سفر", icon: basteh, activeIcon: bastehBlue },
+  { label: "ویزا", icon: viza, activeIcon: vizaBlue },
+  { label: "بیمه مسافرتی", icon: bimeh, activeIcon: bimehBlue },
+  { label: "CPI فرودگاه", icon: cpi, activeIcon: cpiBlue },
+];
 
 function TravelBox() {
   const [selectedTab, setSelectedTab] = useState("هواپیما");
 
-  // محتوای مخصوص هر آیتم
   const renderContent = () => {
     switch (selectedTab) {
       case "هواپیما":
@@ -39,54 +53,26 @@ function TravelBox() {
           <div className={style.travelBox}>
             <div className={style.tapMenu}>
               <ul>
-                <li
-                  onClick={() => setSelectedTab("هواپیما")}
-                  className={selectedTab === "هواپیما" ? style.activeTab : ""}
-                >
-                  <img className={style.iconeMenu} src={planet} alt="" />
-                  <span>هواپیما</span>
-                </li>
-                <li
-                  onClick={() => setSelectedTab("قطار")}
-                  className={selectedTab === "قطار" ? style.activeTab : ""}
-                >
-                  <img className={style.iconeMenu} src={train} alt="" />
-                  <span>قطار</span>
-                </li>
-                <li
-                  onClick={() => setSelectedTab("بسته سفر")}
-                  className={selectedTab === "بسته سفر" ? style.activeTab : ""}
-                >
-                  <img className={style.iconeMenu} src={basteh} alt="" />
-                  <span>بسته سفر</span>
-                </li>
-                <li
-                  onClick={() => setSelectedTab("ویزا")}
-                  className={selectedTab === "ویزا" ? style.activeTab : ""}
-                >
-                  <img className={style.iconeMenu} src={viza} alt="" />
-                  <span>ویزا</span>
-                </li>
-                <li
-                  onClick={() => setSelectedTab("بیمه مسافرتی")}
-                  className={selectedTab === "بیمه مسافرتی" ? style.activeTab : ""}
-                >
-                  <img className={style.iconeMenu} src={bimeh} alt="" />
-                  <span>بیمه مسافرتی</span>
-                </li>
-                <li
-                  onClick={() => setSelectedTab("CPI فرودگاه")}
-                  className={selectedTab === "CPI فرودگاه" ? style.activeTab : ""}
-                >
-                  <img className={style.iconeMenu} src={cpi} alt="" />
-                  <span> CPI فرودگاه </span>
-                </li>
+                {travelOptions.map(option => (
+                  <li
+                    key={option.label}
+                    onClick={() => setSelectedTab(option.label)}
+                    className={selectedTab === option.label ? style.activeTab : ""}
+                  >
+                    <img
+                      className={style.iconeMenu}
+                      src={selectedTab === option.label ? option.activeIcon : option.icon}
+                      alt={option.label}
+                    />
+                    <span>{option.label}</span>
+                  </li>
+                ))}
               </ul>
             </div>
 
             <div className={style.formBox}>
-            <SelectedFilter />
-            <InfoTimeTravel />
+              <SelectedFilter />
+              <InfoTimeTravel />
               {renderContent()}
             </div>
           </div>
@@ -96,54 +82,26 @@ function TravelBox() {
         <div className={style.travelBoxMobile}>
           <div className={style.tapMenuMobile}>
             <ul>
-              <li
-                onClick={() => setSelectedTab("هواپیما")}
-                className={selectedTab === "هواپیما" ? style.activeTab : ""}
-              >
-                <img className={style.iconeMenu} src={planet} alt="" />
-                <span>هواپیما</span>
-              </li>
-              <li
-                onClick={() => setSelectedTab("قطار")}
-                className={selectedTab === "قطار" ? style.activeTab : ""}
-              >
-                <img className={style.iconeMenu} src={train} alt="" />
-                <span>قطار</span>
-              </li>
-              <li
-                onClick={() => setSelectedTab("بسته سفر")}
-                className={selectedTab === "بسته سفر" ? style.activeTab : ""}
-              >
-                <img className={style.iconeMenu} src={basteh} alt="" />
-                <span>بسته سفر</span>
-              </li>
-              <li
-                onClick={() => setSelectedTab("ویزا")}
-                className={selectedTab === "ویزا" ? style.activeTab : ""}
-              >
-                <img className={style.iconeMenu} src={viza} alt="" />
-                <span>ویزا</span>
-              </li>
-              <li
-                onClick={() => setSelectedTab("بیمه مسافرتی")}
-                className={selectedTab === "بیمه مسافرتی" ? style.activeTab : ""}
-              >
-                <img className={style.iconeMenu} src={bimeh} alt="" />
-                <span>بیمه مسافرتی</span>
-              </li>
-              <li
-                onClick={() => setSelectedTab("CPI فرودگاه")}
-                className={selectedTab === "CPI فرودگاه" ? style.activeTab : ""}
-              >
-                <img className={style.iconeMenu} src={cpi} alt="" />
-                <span> CPI فرودگاه </span>
-              </li>
+              {travelOptions.map(option => (
+                <li
+                  key={option.label}
+                  onClick={() => setSelectedTab(option.label)}
+                  className={selectedTab === option.label ? style.activeTab : ""}
+                >
+                  <img
+                    className={style.iconeMenu}
+                    src={selectedTab === option.label ? option.activeIcon : option.icon}
+                    alt={option.label}
+                  />
+                  <span>{option.label}</span>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div className={style.formBox}>
-          <SelectedFilter />
-          <InfoTimeTravel />
+            <SelectedFilter />
+            <InfoTimeTravel />
             {renderContent()}
           </div>
         </div>

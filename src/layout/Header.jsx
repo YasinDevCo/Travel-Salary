@@ -17,13 +17,14 @@ import travelBlue from "../assets/icones/bagpackBlue.svg";
 import accountBlue from "../assets/icones/loginBlue.svg";
 
 function Header({ setShowLoginPage }) {
-  const [login, setLogin] = useState(1); // وضعیت ورود
+  const [login, setLogin] = useState(2); // وضعیت ورود
   const [validity, setValidity] = useState(0); // اعتبار
   const location = useLocation(); // گرفتن URL فعلی
   const [selectedLink, setSelectedLink] = useState("home"); // لینک انتخاب‌شده
 
   // تغییر لینک انتخاب‌شده بر اساس URL فعلی
   useEffect(() => {
+    
     const path = location.pathname;
     if (path === "/home") {
       setSelectedLink("home");
