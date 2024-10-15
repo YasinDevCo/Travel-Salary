@@ -185,7 +185,7 @@ function Header({ setShowLoginPage }) {
                 </Link>
               )}
               {login === 3 && (
-                <Link to={"/home"}>
+                <Link onClick={showHandler}>
                   <img
                     src={selectedLink === "admin" ? accountBlue : account}
                     alt="Admin"
