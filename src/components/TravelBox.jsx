@@ -14,14 +14,46 @@ import bimehBlue from "./../assets/icones/bimehBlue.svg";
 import cpiBlue from "./../assets/icones/cpiBlue.svg";
 import SelectedFilter from "./module/SelectedFilter";
 import InfoTimeTravel from "./search travel/InfoTimeTravel";
+import none from "./../assets/none.png";
+import planeImage from "./../assets/pexels-pixabay-46148.jpg";
+import trainImage from "./../assets/pexels-pixabay-72594.jpg";
+import cpiImage from "./../assets/images.png";
+import bimehImage from "./../assets/pexels-olly-3760067.jpg";
+import packetImage from "./../assets/pexels-nubikini-386009.jpg";
+import vizaImage from "./../assets/pexels-nurseryart-346798.jpg";
 
 const travelOptions = [
-  { label: "هواپیما", icon: planet, activeIcon: planetBlue },
-  { label: "قطار", icon: train, activeIcon: trainBlue },
-  { label: "بسته سفر", icon: basteh, activeIcon: bastehBlue },
-  { label: "ویزا", icon: viza, activeIcon: vizaBlue },
-  { label: "بیمه مسافرتی", icon: bimeh, activeIcon: bimehBlue },
-  { label: "CPI فرودگاه", icon: cpi, activeIcon: cpiBlue },
+  {
+    label: "هواپیما",
+    icon: planet,
+    activeIcon: planetBlue,
+    tapMenuImage: planeImage,
+  },
+  {
+    label: "قطار",
+    icon: train,
+    activeIcon: trainBlue,
+    tapMenuImage: trainImage,
+  },
+  {
+    label: "بسته سفر",
+    icon: basteh,
+    activeIcon: bastehBlue,
+    tapMenuImage: packetImage,
+  },
+  { label: "ویزا", icon: viza, activeIcon: vizaBlue, tapMenuImage: vizaImage },
+  {
+    label: "بیمه مسافرتی",
+    icon: bimeh,
+    activeIcon: bimehBlue,
+    tapMenuImage: bimehImage,
+  },
+  {
+    label: "CPI فرودگاه",
+    icon: cpi,
+    activeIcon: cpiBlue,
+    tapMenuImage: cpiImage,
+  },
 ];
 
 function TravelBox() {
@@ -46,22 +78,36 @@ function TravelBox() {
     }
   };
 
+  const selectedOption = travelOptions.find(
+    (option) => option.label === selectedTab
+  );
+  const currentImage = selectedOption ? selectedOption.tapMenuImage : none; // تصویر پیش‌فرض
+
   return (
     <div className={style.coll}>
       <div className={style.containerAll}>
+          <div className={style.tapMenuImge}>
+            <img src={currentImage} alt={selectedTab} />
+          </div>
         <div className={style.container}>
           <div className={style.travelBox}>
             <div className={style.tapMenu}>
               <ul>
-                {travelOptions.map(option => (
+                {travelOptions.map((option) => (
                   <li
                     key={option.label}
                     onClick={() => setSelectedTab(option.label)}
-                    className={selectedTab === option.label ? style.activeTab : ""}
+                    className={
+                      selectedTab === option.label ? style.activeTab : ""
+                    }
                   >
                     <img
                       className={style.iconeMenu}
-                      src={selectedTab === option.label ? option.activeIcon : option.icon}
+                      src={
+                        selectedTab === option.label
+                          ? option.activeIcon
+                          : option.icon
+                      }
                       alt={option.label}
                     />
                     <span>{option.label}</span>
@@ -82,15 +128,21 @@ function TravelBox() {
         <div className={style.travelBoxMobile}>
           <div className={style.tapMenuMobile}>
             <ul>
-              {travelOptions.map(option => (
+              {travelOptions.map((option) => (
                 <li
                   key={option.label}
                   onClick={() => setSelectedTab(option.label)}
-                  className={selectedTab === option.label ? style.activeTab : ""}
+                  className={
+                    selectedTab === option.label ? style.activeTab : ""
+                  }
                 >
                   <img
                     className={style.iconeMenu}
-                    src={selectedTab === option.label ? option.activeIcon : option.icon}
+                    src={
+                      selectedTab === option.label
+                        ? option.activeIcon
+                        : option.icon
+                    }
                     alt={option.label}
                   />
                   <span>{option.label}</span>

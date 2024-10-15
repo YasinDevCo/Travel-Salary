@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
 }
-.header {
+.header {  
   display: flex;
   width: 100%;
   max-width: var(--main-max-width);
