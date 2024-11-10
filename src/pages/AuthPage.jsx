@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import SendUserName from "../components/templates/SendUserName";
 import CheckOtp from "../components/templates/auth/CheckOtp";
 import CheckOtpChangePass from "../components/templates/auth/CheckOtpChangePass";
 import { ToastContainer } from "react-toastify";

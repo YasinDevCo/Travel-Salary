@@ -1,6 +1,6 @@
 import React from "react";
 import { useMutation } from "react-query";
-import { checkUserNamePassword } from "../../../services/auth";
+
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import style from "./../SendUserName.module.css";
@@ -9,18 +9,13 @@ import {
   validateUsername,
   validatePassword,
 } from "../../../services/validation"; // وارد کردن توابع اعتبارسنجی
-import { checkOtp } from "../../../services/auth";
+import { checkOtp, checkPasswoard } from "../../../services/auth";
 
 function CheckPass({ setStep, password, setPassword }) {
   const handleSubmit = async (event) => {
     event.preventDefault();
     let isValid = true;
 
-    const usernameError = validateUsername(username);
-    if (usernameError) {
-      toast.warning(usernameError);
-      isValid = false;
-    }
     const passwordError = validatePassword(password);
     if (passwordError) {
       toast.warning(passwordError);
@@ -30,14 +25,13 @@ function CheckPass({ setStep, password, setPassword }) {
       return;
     }
     try {
-      const { response, error } = await checkUserNamePassword(
-        username,
-        password
-      );
+      const { response, error } = await checkPasswoard(password);
 
       if (response.data.data.Result === "@1") {
         setStep(1);
         console.log("ورود موفقیت‌آمیز بود.", response.data.data.Result);
+      } else if (response.data.data.Result === "@3") {
+        setStep(3);
       } else if (error) {
         console.log("خطا در ورود:", error);
         toast.error("ورود ناموفق. لطفاً دوباره تلاش کنید.");
@@ -65,11 +59,11 @@ function CheckPass({ setStep, password, setPassword }) {
 
         <div style={{ width: "100%" }}>
           <button style={{ width: "100%" }} type="submit">
-            وارد شوید 
+            وارد شوید
           </button>
           <div className={style.other}>
             <span className={style.register}>
-            ورود با رمز بکبار مصرف{" "}
+              ورود با رمز بکبار مصرف{" "}
               <Link
                 style={{
                   color: "var(--main-blue)",
@@ -81,7 +75,9 @@ function CheckPass({ setStep, password, setPassword }) {
               </Link>
               کنید
             </span>
-            <Link onClick={() => setStep(4)} className={style.forgot}>فراموشی رمز عبور</Link>
+            <Link onClick={() => setStep(4)} className={style.forgot}>
+              فراموشی رمز عبور
+            </Link>
           </div>
         </div>
       </form>

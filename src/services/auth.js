@@ -1,11 +1,25 @@
 import api from "./../config/api";
 import { LoginUser, RegisterUser } from "./dataClass";
 
-const checkUserNamePassword = async (userName, password) => {
+const checkNumber = async (number) => {
   try {
     debugger;
     const data = new LoginUser();
-    data.UserName = userName;
+    data.UserName = number;
+    console.log("data", data);
+    const response = await api.post(
+      "identity/Authentication/",
+      JSON.stringify(data)
+    );
+    return { response };
+  } catch (error) {
+    return { error };
+  }
+};
+const checkPasswoard = async (password) => {
+  try {
+    debugger;
+    const data = new LoginUser();
     data.Password = password;
     console.log("data", data);
     const response = await api.post(
@@ -17,7 +31,6 @@ const checkUserNamePassword = async (userName, password) => {
     return { error };
   }
 };
-const checkUserNumber = async (number) => {};
 const checkOtp = async (userName, password, sms) => {
   try {
     debugger;
@@ -62,4 +75,4 @@ const sendInfoRegister = async (
   }
 };
 
-export { checkUserNamePassword, checkOtp, checkUserNumber, sendInfoRegister };
+export { checkNumber, checkOtp, checkPasswoard, sendInfoRegister };

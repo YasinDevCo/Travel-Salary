@@ -1,13 +1,11 @@
 import React from "react";
 import { useMutation } from "react-query";
-import { checkUserNamePassword, checkUserNumber } from "../../../services/auth";
+import {  checkNumber } from "../../../services/auth";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import style from "../SendUserName.module.css";
 import { Link } from "react-router-dom";
 import {
-  validateUsername,
-  validatePassword,
   validatePhoneNumber,
 } from "../../../services/validation"; // وارد کردن توابع اعتبارسنجی
 
@@ -23,20 +21,18 @@ function Checking({ setStep, number, setNumber }) {
     }
     if (!isValid) {
       return;
-    } else {
-      if (number == "09913445586") {
-        setStep(1);
-      } else {
-        setStep(3);
-      }
     }
-    try {
-      const { response, error } = await checkUserNumber(number);
 
+    try {
+      const { response, error } = await checkNumber(number);
+      // @1 - @3
       if (response.data.data.Result === "@1") {
         setStep(1);
         console.log("ورود موفقیت‌آمیز بود.", response.data.data.Result);
-      } else if (error) {
+      }else if(response.data.data.Result === "@3"){
+        setStep(3);
+      } 
+      else if (error) {
         console.log("خطا در ورود:", error);
         toast.error("ورود ناموفق. لطفاً دوباره تلاش کنید.");
       } else {
@@ -73,5 +69,4 @@ function Checking({ setStep, number, setNumber }) {
     </>
   );
 }
-
 export default Checking;
