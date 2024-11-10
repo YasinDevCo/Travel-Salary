@@ -28,9 +28,9 @@
   font-size: 1.5rem;
   color: var(--main-blue);
   padding: 0 10px;
-  background: transparent;
-  border: 2px solid var(--main-blue);
+  border: none;
   outline: none;
+  background-color: var(--main-white);
   border-radius: 10px;
 }
 
@@ -97,8 +97,16 @@ form .btnSub {
   top: 0;
   font-size: 1rem;
   background: #e1e6ea;
+  color: var(--main-text);
+  
 }
-
+.itemInput input:focus ,
+.itemInput input:valid {
+  background: transparent;
+  border: 2px solid var(--main-text);
+  outline: none;
+  color: var(--main-text);
+}
 @media (max-width: 750px) {
 
   .itemInput {

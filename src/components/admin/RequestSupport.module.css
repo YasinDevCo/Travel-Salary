@@ -1,0 +1,113 @@
+.content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  
+  
+  }
+  .topContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    padding-right: 10px;
+  }
+  .topContent h3 {
+    font-size: 1.5rem;
+    border-right: 2px solid var(--main-text);
+    padding-right: 10px;
+  }
+  .topContent button {
+    background: none;
+    border: 1.5px solid var(--main-blue);
+    outline: none;
+    color: var(--main-blue);
+    padding: 8px 10px;
+    height: 58px;
+    width: 280px;
+    font-size: 1.5rem;
+    border-radius: 20px;
+  }
+  /* media query */
+  
+  @media (max-width: 1052px) {
+    .topContent button {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 750px) {
+    .topContent h3 {
+      display: none;
+    }
+    .content {
+      margin-top: -120px;
+    }
+  }
+  .content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  
+  
+  }
+  .topContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    padding-right: 10px;
+  }
+  .topContent h3 {
+    font-size: 1.5rem;
+    border-right: 2px solid var(--main-text);
+    padding-right: 10px;
+  }
+  .topContent .btnRequest {
+    background: none;
+    border: 1.5px solid var(--main-blue);
+    outline: none;
+    color: var(--main-blue);
+    padding: 8px 8px 8px 5px;
+    height: 58px;
+    width: 280px;
+    font-size: 1.5rem;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  .topContent .btnRequest span {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: var(--main-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .topContent .btnRequest span img{
+      width: 25px;
+      height: 25px;
+  }
+  /* media query */
+  
+  @media (max-width: 1052px) {
+    .topContent button {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 750px) {
+    .topContent h3 {
+      display: none;
+    }
+    .content {
+      margin-top: -120px;
+    }
+  }
+    

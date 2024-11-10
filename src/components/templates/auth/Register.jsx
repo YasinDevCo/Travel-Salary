@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import style from "./Register.module.css"; // به فایل CSS برای استایل نیاز دارید
+import style from "../Register.module.css";
 import { Link } from "react-router-dom";
 import {
   validateGender,
@@ -9,9 +9,8 @@ import {
   validateNationalCode,
   validatePassword,
   validateUsername,
-} from "../../services/validation";
-
-// toast.configure(); // تنظیمات توست
+} from "../../../services/validation";
+import { sendInfoRegister } from "../../../services/auth"; // ایمپورت تابع ارسال
 
 function Register({
   step,
@@ -27,7 +26,7 @@ function Register({
   nationalCode,
   setNationalCode,
 }) {
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     let isValid = true;
 
@@ -35,10 +34,7 @@ function Register({
       { error: validateName(name), message: "nameError" },
       { error: validateUsername(username), message: "usernameError" },
       { error: validatePassword(password), message: "passwordError" },
-      {
-        error: validateNationalCode(nationalCode),
-        message: "nationalCodeError",
-      },
+      { error: validateNationalCode(nationalCode), message: "nationalCodeError" },
       { error: validateGender(gender), message: "genderError" },
     ];
 
@@ -52,15 +48,28 @@ function Register({
       return;
     }
 
-    // post
-    console.log({ name, username, password, gender });
-    toast.success("ثبت‌نام با موفقیت انجام شد!");
+    try {
+      // ارسال داده به سرور با استفاده از sendInfoRegister
+      const response = await sendInfoRegister(
+        name,
+        username,
+        password,
+        gender,
+        nationalCode
+      );
 
-    setName("");
-    setUsername("");
-    setPassword("");
-    setGender("");
-    setNationalCode("");
+      if (response) {
+        toast.success("ثبت‌نام با موفقیت انجام شد!");
+        setName("");
+        setUsername("");
+        setPassword("");
+        setGender("");
+        setNationalCode("");
+      }
+    } catch (error) {
+      console.error("خطا در ثبت‌نام:", error);
+      toast.error("خطا در ثبت‌نام، لطفاً دوباره تلاش کنید.");
+    }
   };
 
   return (
@@ -89,7 +98,7 @@ function Register({
           <div className={style.itemInput}>
             <input
               style={{ width: "100%" }}
-              ty  pe="text"
+              type="text"
               id="username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}

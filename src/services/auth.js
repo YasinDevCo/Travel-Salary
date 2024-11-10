@@ -1,5 +1,5 @@
 import api from "./../config/api";
-import { LoginUser } from "./dataClass";
+import { LoginUser, RegisterUser } from "./dataClass";
 
 const checkUserNamePassword = async (userName, password) => {
   try {
@@ -17,7 +17,7 @@ const checkUserNamePassword = async (userName, password) => {
     return { error };
   }
 };
-
+const checkUserNumber = async (number) => {};
 const checkOtp = async (userName, password, sms) => {
   try {
     debugger;
@@ -36,4 +36,30 @@ const checkOtp = async (userName, password, sms) => {
   }
 };
 
-export { checkUserNamePassword, checkOtp };
+const sendInfoRegister = async (
+  name,
+  username,
+  password,
+  gender,
+  nationalCode
+) => {
+  try {
+    debugger;
+    const data = new RegisterUser();
+    data.UserName = username;
+    data.Password = password;
+    data.Name = name;
+    data.Gender = gender;
+    data.NationalCode = nationalCode;
+    console.log("data", data);
+    const response = await api.post(
+      "identity/Authentication/registeruser",
+      JSON.stringify(data)
+    );
+    return { response };
+  } catch (error) {
+    return { error };
+  }
+};
+
+export { checkUserNamePassword, checkOtp, checkUserNumber, sendInfoRegister };

@@ -6,6 +6,7 @@
   height: 100%;
   backdrop-filter: blur(6px);
   z-index: 10000;
+  overflow-y: scroll;
 }
 .contentIn {
   width: 700px;
@@ -28,13 +29,19 @@
   top: 20px;
   font-size: 1.5rem;
   color: var(--main-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 .content .sendCode{
   position: absolute;
   right: 20px;
   top: 80px;
   font-size: .8rem;
+  font-weight: 500;
   color: var(--main-text);
+  
 }
 .content .sendCode span{
   color: var(--main-blue);
@@ -85,7 +92,12 @@ cursor: pointer;
   background-color: white;
 }
   
-
+.btnArrowRight{
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
 @media (max-width: 750px) {
   .contentIn {
     width: calc(100% - 20px);

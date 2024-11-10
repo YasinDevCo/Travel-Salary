@@ -85,6 +85,9 @@ body {
   transition: background-color 0.5s ease, color 0.5s ease;
   font-family: Vazirmatn;
 }
+body.no-scroll{
+  overflow: hidden;
+}
 li {
   list-style: none;
 }

@@ -1,7 +1,6 @@
 import { SlArrowDown } from "react-icons/sl";
 import { GiSchoolBag } from "react-icons/gi";
 import { LiaCoinsSolid } from "react-icons/lia";
-import { BsPersonCircle } from "react-icons/bs";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import style from "./header.module.css";
@@ -16,6 +15,7 @@ import serviceBlue from "../assets/icones/serviceBlue.svg";
 import travelBlue from "../assets/icones/bagpackBlue.svg";
 import accountBlue from "../assets/icones/loginBlue.svg";
 
+
 function Header({ setShowLoginPage }) {
   const [login, setLogin] = useState(3); // وضعیت ورود
   const [validity, setValidity] = useState(0); // اعتبار
@@ -24,7 +24,6 @@ function Header({ setShowLoginPage }) {
 
   // تغییر لینک انتخاب‌شده بر اساس URL فعلی
   useEffect(() => {
-    
     const path = location.pathname;
     if (path === "/home") {
       setSelectedLink("home");
@@ -41,7 +40,33 @@ function Header({ setShowLoginPage }) {
 
   const showHandler = () => {
     setShowLoginPage(true);
+    document.body.classList.add('no-scroll');
   };
+
+  const menuItems = [
+    {
+      to: "home/services",
+      label: "خدمات سفر",
+      icon: <SlArrowDown size={15} />,
+      subMenu: ["1خدمات سفر", "2خدمات سفر", "3خدمات سفر"],
+    },
+    {
+      to: "home/",
+      label: "مرکز پشتیبانی",
+      icon: <SlArrowDown size={15} />,
+      subMenu: ["1مرکز پشتیبانی", "2مرکز پشتیبانی", "3مرکز پشتیبانی"],
+    },
+    {
+      to: "home/travels",
+      label: "سفر های من",
+      icon: <GiSchoolBag size={25} />,
+    },
+    {
+      to: "home/",
+      label: `اعتبار : ${validity} تومان`,
+      icon: <LiaCoinsSolid size={27} />,
+    },
+  ];
 
   return (
     <>
@@ -50,78 +75,31 @@ function Header({ setShowLoginPage }) {
           <img src={logo} alt="logo" className={style.logo} />
           <div className={style.menu}>
             <ul>
-              <li className={style.dropdown}>
-                <Link to="home/services">خدمات سفر</Link>
-                <SlArrowDown size={15} />
-                <div className={style.content}>
-                  <Link className={style.item}>1خدمات سفر</Link>
-                  <Link className={style.item}>2خدمات سفر</Link>
-                  <Link className={style.item}>3خدمات سفر</Link>
-                </div>
-              </li>
-              <li className={style.dropdown}>
-                <Link to="home/">مرکز پشتیبانی</Link>
-                <SlArrowDown size={15} />
-                <div className={style.content}>
-                  <Link className={style.item}>1مرکز پشتیبانی</Link>
-                  <Link className={style.item}>2مرکز پشتیبانی</Link>
-                  <Link className={style.item}>3مرکز پشتیبانی</Link>
-                </div>
-              </li>
-
-              <li>
-                <GiSchoolBag size={25} />
-                <Link to="home/travels">سفر های من</Link>
-              </li>
-              <li>
-                <LiaCoinsSolid size={27} />
-                <Link to="home/">اعتبار : {validity} تومان</Link>
-              </li>
-            </ul>
-          </div>
-
-          {/*  menuTablet */}
-          <div className={style.menuTablet}>
-            <ul>
-              <li className={style.dropdown}>
-                <Link to={"/home"}> پشتیبانی</Link>
-                <SlArrowDown size={15} />
-                <div className={style.content}>
-                  <Link className={style.item}>1مرکز پشتیبانی</Link>
-                  <Link className={style.item}>2مرکز پشتیبانی</Link>
-                  <Link className={style.item}>3مرکز پشتیبانی</Link>
-                </div>
-              </li>
-              |
-              <li>
-                <GiSchoolBag size={25} />
-                <Link to={"/home/travels"}>سفر های من</Link>
-              </li>
-              |
-              <li>
-                <LiaCoinsSolid size={27} />
-                <Link to={"/home"}>{validity} </Link>
-              </li>
+              {menuItems.map((item, index) => (
+                <li key={index} className={style.dropdown}>
+                  <Link to={item.to}>{item.label}</Link>
+                  {item.icon}
+                  {item.subMenu && (
+                    <div className={style.content}>
+                      {item.subMenu.map((subItem, subIndex) => (
+                        <Link key={subIndex} className={style.item}>
+                          {subItem}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </li>
+              ))}
             </ul>
           </div>
 
           {login === 2 && (
-            <>
-              <Link to={"home/admin"}>
-                <button
-                  className={style.btnAcount}
-                  style={{ cursor: "pointer" }}
-                >
-                  پنل ادمین
-                </button>
-                <button
-                  className={style.btnAcountIcone}
-                  style={{ cursor: "pointer" }}
-                >
-                  <img src={loginIcone} alt="Login Icon" />
-                </button>
-              </Link>
-            </>
+            <Link to={"home/admin"}>
+              <button className={style.btnAcount}>پنل ادمین</button>
+              <button className={style.btnAcountIcone}>
+                <img src={loginIcone} alt="Login Icon" />
+              </button>
+            </Link>
           )}
           {login === 3 && (
             <>
@@ -168,30 +146,12 @@ function Header({ setShowLoginPage }) {
               </Link>
             </li>
             <li>
-              {login === 1 && (
-                <Link onClick={showHandler}>
-                  <img
-                    src={selectedLink === "admin" ? accountBlue : account}
-                    alt="Admin"
-                  />
-                </Link>
-              )}{" "}
-              {login === 2 && (
-                <Link to={"/home/admin"}>
-                  <img
-                    src={selectedLink === "admin" ? accountBlue : account}
-                    alt="Admin"
-                  />
-                </Link>
-              )}
-              {login === 3 && (
-                <Link onClick={showHandler}>
-                  <img
-                    src={selectedLink === "admin" ? accountBlue : account}
-                    alt="Admin"
-                  />
-                </Link>
-              )}
+              <Link onClick={showHandler}>
+                <img
+                  src={selectedLink === "admin" ? accountBlue : account}
+                  alt="Admin"
+                />
+              </Link>
             </li>
           </ul>
         </div>

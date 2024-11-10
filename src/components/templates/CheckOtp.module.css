@@ -21,10 +21,12 @@
   height: 50px;
   text-align: center;
   border-radius: 10px;
-  border: 1px solid var(--main-blue);
   background-color: transparent;
   color: var(--main-blue);
   font-size: 1.2rem;
+  border: none;
+  outline: none;
+  background-color: var(--main-white);
 }
 .timer {
   font-size: 0.8rem;

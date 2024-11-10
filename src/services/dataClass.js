@@ -11,7 +11,15 @@ class LoginUser extends _baseModel {
   UserName = "";
   Password = "";
   SmsCode = 0;
- Captcha = 0;
+  Captcha = 0;
 }
 
-export { _baseModel, LoginUser };
+class RegisterUser extends _baseModel {
+  UserName = "";
+  Password = "";
+  Name = "";
+  Gender = "";
+  NationalCode = "";
+}
+
+export { _baseModel, LoginUser,RegisterUser };
