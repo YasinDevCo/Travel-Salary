@@ -15,7 +15,6 @@ import serviceBlue from "../assets/icones/serviceBlue.svg";
 import travelBlue from "../assets/icones/bagpackBlue.svg";
 import accountBlue from "../assets/icones/loginBlue.svg";
 
-
 function Header({ setShowLoginPage }) {
   const [login, setLogin] = useState(2); // وضعیت ورود
   const [validity, setValidity] = useState(0); // اعتبار
@@ -40,7 +39,7 @@ function Header({ setShowLoginPage }) {
 
   const showHandler = () => {
     setShowLoginPage(true);
-    document.body.classList.add('no-scroll');
+    document.body.classList.add("no-scroll");
   };
 
   const menuItems = [
@@ -146,12 +145,22 @@ function Header({ setShowLoginPage }) {
               </Link>
             </li>
             <li>
-              <Link onClick={showHandler}>
-                <img
-                  src={selectedLink === "admin" ? accountBlue : account}
-                  alt="Admin"
-                />
-              </Link>
+              {login === 2 && (
+                <Link to={"/home/admin"}>
+                  <img
+                    src={selectedLink === "admin" ? accountBlue : account}
+                    alt="Admin"
+                  />
+                </Link>
+              )}
+              {login === 3 && (
+                <Link onClick={showHandler}>
+                  <img
+                    src={selectedLink === "admin" ? accountBlue : account}
+                    alt="Admin"
+                  />
+                </Link>
+              )}
             </li>
           </ul>
         </div>
