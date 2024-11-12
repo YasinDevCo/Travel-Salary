@@ -17,7 +17,7 @@ import accountBlue from "../assets/icones/loginBlue.svg";
 
 
 function Header({ setShowLoginPage }) {
-  const [login, setLogin] = useState(3); // وضعیت ورود
+  const [login, setLogin] = useState(2); // وضعیت ورود
   const [validity, setValidity] = useState(0); // اعتبار
   const location = useLocation(); // گرفتن URL فعلی
   const [selectedLink, setSelectedLink] = useState("home"); // لینک انتخاب‌شده

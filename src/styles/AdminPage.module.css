@@ -4,6 +4,7 @@
   justify-content: center;
 }
 .adminPanel {
+  position: relative;
   margin: 20px auto;
   /* padding: 0 30px; */
   max-width: var(--main-max-width);
@@ -13,17 +14,16 @@
   align-items: flex-start;
   gap: 10px;
 }
+
 .panelContent {
   width: 100%;
   max-width: 1050px;
   z-index: 100;
 }
 @media (max-width: 1052px) {
-
 }
 @media (max-width: 750px) {
   .container {
     margin: 0 10px;
-  
   }
 }

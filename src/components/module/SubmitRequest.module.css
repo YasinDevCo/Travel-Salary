@@ -1,0 +1,122 @@
+.content {
+  width: 100%;
+  background: var(--radial-gradient);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 10px;
+}
+.content form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.content .cate {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.cate h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.content .cate img {
+  width: 38px;
+}
+.dropdown {
+  position: relative;
+  width: 100%;
+}
+.dropdownHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10px;
+  background: var(--main-white);
+  border-radius: 8px;
+  cursor: pointer;
+  color: #666;
+  font-size: 16px;
+}
+.arrowIcon {
+  transition: transform 0.3s;
+  width: 40px;
+  height: 40px;
+  transform: rotate(180deg);
+}
+.arrowIcon.open {
+  transform: rotate(360deg);
+}
+.dropdownList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: var(--gray-2);
+  border-radius: 8px;
+  margin-top: 5px;
+}
+
+.dropdownItem {
+  padding: 10px;
+  color: var(--gray);
+  cursor: pointer;
+  font-size: 16px;
+  border-top: 1px solid rgb(126, 123, 123);
+}
+.dropdownItem:first-child {
+  border-top: none;
+}
+
+.descriptionContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 200px;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  color: #666;
+  resize: none;
+  outline: none;
+}
+
+.textarea::placeholder {
+  color: var(--gray);
+  text-align: right;
+}
+.btns{
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    flex-direction: row-reverse;
+}
+.btnSubmit {
+  background: var(--main-blue);
+  color: var(--main-white);
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  font-size: 1.3rem;
+  width: fit-content;
+  outline: none;
+  cursor: pointer;
+}
+.btnExit {
+  background:transparent;
+  color: var(--main-blue);
+  border-radius: 10px;
+  border: 1px solid var(--main-blue);
+  padding: 10px;
+  font-size: 1.3rem;
+  width: fit-content;
+  outline: none;
+  cursor: pointer;
+}

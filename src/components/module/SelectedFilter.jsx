@@ -7,7 +7,7 @@ const SelectedFilter = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => setIsOpen((prev) => !prev);
-  
+
   const clickHandler = () => {
     const newOption = selectedOption === "یک طرفه" ? "دو طرفه" : "یک طرفه";
     setSelectedOption(newOption);
