@@ -7,7 +7,7 @@ import importOne from "./../../assets/importOne.svg";
 import importGroup from "./../../assets/importGroup.svg";
 import InsertUser from "./InsertUser";
 
-function PersonelList({ setShowNC, form, onEdit, onDelete }) {
+function PersonelList({ setShowNC, form, onEdit, onDelete,setshowNCG }) {
   const { name, id } = form;
   const [showInsertUser, setShowInsertUser] = useState(false);
   const handleEdit = () => {
@@ -31,7 +31,7 @@ function PersonelList({ setShowNC, form, onEdit, onDelete }) {
             <span onClick={() => setShowNC(true)}>
               افزودن تکی <img src={importOne} alt="Add Single" />
             </span>
-            <span>
+            <span onClick={()=>setshowNCG(true)}>
               افزودن گروهی <img src={importGroup} alt="Add Group" />
             </span>
             <span onClick={() => setShowInsertUser(true)}>
