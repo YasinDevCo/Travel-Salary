@@ -3,6 +3,7 @@ import Comments from "../components/Comments";
 import DownloadApp from "../components/DownloadApp";
 import Offers from "../components/Offers";
 import QuestionAnsewer from "../components/QuestionAnsewer";
+import MainSearch from "../components/search travel/MainSearch";
 import Services from "../components/Services";
 import ThemeOption from "../components/ThemeOption";
 import TravelBox from "../components/TravelBox";
@@ -31,6 +32,7 @@ function HomePage() {
       <QuestionAnsewer />
       <br />
       <Comments/>
+      
     </div>
   );
 }

@@ -17,6 +17,7 @@ function Router({ showLoginPage, setShowLoginPage }) {
         path="/home"
         element={
           <HomePage
+        
             showLoginPage={showLoginPage}
             setShowLoginPage={setShowLoginPage}
           />

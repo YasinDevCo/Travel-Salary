@@ -6,13 +6,17 @@
   gap: 10px;
   margin-top: 60px;
 }
-
+input {
+  outline: none;
+  /* border: none; */
+}
 .inputs {
   width: 66.66%;
   display: flex;
   align-items: center;
   height: 70px;
   gap: 10px;
+  outline: none;
 }
 .inputs .input {
   width: 50%;
@@ -92,6 +96,9 @@
   border-radius: 13px;
   font-size: 1.1rem;
   font-weight: 400;
+  background: var(--main-blue);
+  color: var(--main-white);
+  
 }
 @media (max-width: 1052px) {
   .infoTimeTravel {
@@ -123,7 +130,7 @@
   }
   .inputs .input {
     width: 100%;
- 
+
     display: flex;
     align-items: center;
     position: relative;
@@ -149,7 +156,7 @@
   }
   .inputs .input input {
     height: 70px;
- 
+
     width: 100%;
     flex-direction: column;
     border: none;
@@ -208,27 +215,17 @@
 }
 @media (max-width: 480px) {
   .inputs .input select {
-  
-    font-size: .9rem;
-   
-   
+    font-size: 0.9rem;
   }
   .inputs .input input {
-  
-    font-size: .9rem;
-  
+    font-size: 0.9rem;
   }
 }
 @media (max-width: 380px) {
   .inputs .input select {
-  
-    font-size: .8rem;
-   
-   
+    font-size: 0.8rem;
   }
   .inputs .input input {
-  
-    font-size: .8rem;
-  
+    font-size: 0.8rem;
   }
 }

@@ -179,6 +179,9 @@
  .btnAcountIcone{
   display: flex;
  }
+ .menuTablet .disNone{
+  display: none;
+ }
 }
 
 @media (max-width: 750px) {

@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, {  useState } from 'react';
 import style from './InfoTimeTravel.module.css';
 import { PiRepeat } from 'react-icons/pi';
+import { useNavigate } from 'react-router-dom';
 
 function InfoTimeTravel() {
   const [departureCity, setDepartureCity] = useState('');
@@ -8,7 +9,7 @@ function InfoTimeTravel() {
   const [departureDate, setDepartureDate] = useState('');
   const [returnDate, setReturnDate] = useState('');
   const [passengers, setPassengers] = useState(1);
-
+  const navigate = useNavigate(); // استفاده از useNavigate برای هدایت به صفحات مختلف
   // فانکشن برای جابجایی مقادیر و مکان فیزیکی مبدا و مقصد
   const swapCities = () => {
     setDepartureCity((prev) => destinationCity);
@@ -34,7 +35,9 @@ function InfoTimeTravel() {
       returnDate,
       passengers,
     };
+    
     console.log('فرم ارسال شد:', formData);
+    navigate("searchTravel");
   };
 
   return (
@@ -90,7 +93,6 @@ function InfoTimeTravel() {
           />
         </div>
       </div>
-
       <div className={style.other}>
         <input
           placeholder="1 مسافر"
